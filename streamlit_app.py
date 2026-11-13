@@ -1572,7 +1572,6 @@ if menu == "🏠 Accueil / Réviser":
             st.success("L'URANIUM D'ARLIT"); st.write("Le Niger est un des grands producteurs d'uranium au monde. Mines à Arlit et Akouta, dans le nord. L'uranium sert à faire de l'électricité nucléaire.")
         elif "petrole" in q or "pétrole" in q:
             st.success("LE PÉTROLE DU NIGER"); st.write("Pétrole découvert à Agadem, dans l'est. Raffinerie de Zinder (SORAZ). Le Niger produit son propre carburant.")
-        elif "agriculture" in q or "mil" in q or "sorgho" in q:
         elif "éducation" in q or "education" in q or "école" in q or "ecole" in q:
             st.success("L'ÉDUCATION AU NIGER")
             st.write("Système : Primaire 6 ans (CI au CM2), Collège 4 ans (6ème à 3ème), Lycée 3 ans (2nde à Terminale). Langue d'enseignement : Français. On apprend aussi les langues nationales.")
