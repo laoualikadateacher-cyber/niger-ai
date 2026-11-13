@@ -1706,7 +1706,7 @@ else:
         st.info(f"Question : {question}")
         st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
         st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
- else:
+else:
         
       elif menu == "📖 Mon Livre":
            st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
@@ -1721,7 +1721,7 @@ elif menu == "💰 Paiement":
     if st.button("Je confirme, je veux payer"):
         if nom == "" or tel == "":
             st.warning("Mets ton nom et numéro !")
-        else:
+else:
             
             st.success(f"Merci {nom} !")
             st.write("**ÉTAPE 1 : Envoie 2.000 FCFA avec *555# vers 96 75 56 49**")
