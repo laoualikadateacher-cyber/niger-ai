@@ -11,7 +11,7 @@ if menu == "🏠 Accueil / Réviser":
     st.header("Pose ta question sur le Niger")
     question = st.text_input("Ta question :")
     if st.button("Demander à NigerAI"):  
-      q = question.lower().strip()
+        q = question.lower().strip()
         if q == "":
             st.warning("Écris ta question d'abord !")
       
