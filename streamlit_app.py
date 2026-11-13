@@ -1607,7 +1607,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("8. Abdourahamane Tiani (depuis 2023)")
         elif "prof" in q or "enseignant" in q:
             st.success("LES ENSEIGNANTS AU NIGER")
-            st.write("Les enseignants forment les élèves du primaire au lycée. Ils enseignent en français, avec les programmes du Ministère de l'Éducation Nationale du Niger.")  st.success("L'AGRICULTURE AU NIGER"); st.write("Base de l'économie. On cultive le mil, le sorgho, le riz, le niébé, l'oignon, l'arachide. 80% des Nigériens vivent de l'agriculture et de l'élevage.")
+            st.write("Les enseignants forment les élèves du primaire au lycée. Ils enseignent en français, avec les programmes du Ministère de l'Éducation Nationale du Niger.")  st.success("L'AGRICULTURE AU NIGER"); 
         elif "drapeau" in q:
             st.success("LE DRAPEAU DU NIGER"); st.write("3 bandes : Orange en haut = Sahara, Blanc au milieu = fleuve, Vert en bas = agriculture. Rond orange au milieu = soleil.")
         elif "hymne" in q or "histoire" in q and "niger" in q:
