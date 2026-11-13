@@ -1689,8 +1689,8 @@ if menu == "🏠 Accueil / Réviser":
             st.success("PYTHAGORE"); st.write("Dans un triangle rectangle : a² + b² = c². Exemple : 3² + 4² = 25 = 5².")
         elif "2+2" in q or "2 + 2" in q:
             st.success("2 + 2 = 4")
-        
-        else:
+          
+else:
     # --- GROS CERVEAU GROQ ---
     try:
         reponse = client.chat.completions.create(
