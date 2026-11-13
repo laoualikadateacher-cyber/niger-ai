@@ -1702,18 +1702,18 @@ else:
         )
         st.success(reponse.choices[0].message.content)
     except:
-    st.error("pas de connexion. verifie ton internet.")
-    st.info(f"Question : {question}")
-    st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
-    st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
+        st.error("pas de connexion. verifie ton internet.")
+        st.info(f"Question : {question}")
+        st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
+        st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
 
 elif menu == "📖 Mon Livre":
     
        else:
-    st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
-    st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
-    st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
-    st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
+           st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
+           st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
+           st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
+           st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
 
 elif menu == "💰 Paiement":
     st.header("💰 Paiement - 2.000 FCFA - Airtel Money UNIQUEMENT")
