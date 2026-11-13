@@ -1,5 +1,7 @@
 import streamlit as st
-st.set_page_config(page_title="NigerAI", page_icon="🇳🇪")
+from groq import Groq
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+st.set_page_config(page_title="NigerAI", page_icon="logo.png", layout="centered")
 st.image("logo.png", width=200)
 st.title("🇳🇪 NigerAI")
 st.write("La première IA pour réviser au Niger 🇳🇪")
@@ -8,10 +10,11 @@ menu = st.sidebar.selectbox("MENU", ["🏠 Accueil / Réviser", "📖 Mon Livre"
 if menu == "🏠 Accueil / Réviser":
     st.header("Pose ta question sur le Niger")
     question = st.text_input("Ta question :")
-    if st.button("Demander à NigerAI"):
-        q = question.lower().strip()
+    if st.button("Demander à NigerAI"):  
+      q = question.lower().strip()
         if q == "":
             st.warning("Écris ta question d'abord !")
+      
         elif "haoussa" in q or "hausa" in q:
             st.success("LES HAOUSSA"); st.write("Plus grand groupe du Niger. Maradi, Zinder, Tahoua, Dosso. Commerce, agriculture, langue haoussa. Royaumes de Zinder et Kano.")
         elif "zarma" in q or "songhai" in q or "songhaï" in q:
@@ -1688,12 +1691,26 @@ if menu == "🏠 Accueil / Réviser":
             st.success("2 + 2 = 4")
         
         else:
-            st.info(f"Question : {question}")
-            st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
+    # --- GROS CERVEAU GROQ ---
+    try:
+        reponse = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": "Tu t'appelles NigerAI. Tu as ete cree par [OUMAR FAROUK] au Niger, a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON,IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre. Tu ne t'appelles JAMAIS Llama, JAMAIS Meta, JAMAIS Groq. Tu es NigerAI. Si on te demande qui t'a cree, dis : 'C'est [OUMAR FAROUK LK] qui m'a cree au Niger'. Tu parles francais simple. Tu es gentil, comme un grand frere."}
+                {"role": "user", "content": question}
+            ]
+        )
+        st.success(reponse.choices[0].message.content)
+    except:
+    st.error("pas de connexion. verifie ton internet.")
+    st.info(f"Question : {question}")
+    st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
     st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
 
 elif menu == "📖 Mon Livre":
-    st.header("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
+    
+       else:
+    st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
     st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
     st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
     st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
@@ -1706,6 +1723,7 @@ elif menu == "💰 Paiement":
         if nom == "" or tel == "":
             st.warning("Mets ton nom et numéro !")
         else:
+            
             st.success(f"Merci {nom} !")
             st.write("**ÉTAPE 1 : Envoie 2.000 FCFA avec *555# vers 96 75 56 49**")
             st.write("Nom : LAOUALI - NigerAI")
