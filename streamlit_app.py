@@ -1706,26 +1706,26 @@ else:
         st.info(f"Question : {question}")
         st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
         st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
-else:
+     else:
         
-      elif menu == "📖 Mon Livre":
-           st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
-           st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
-           st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
-           st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
+          elif menu == "📖 Mon Livre":
+              st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
+              st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
+              st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
+              st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
 
-elif menu == "💰 Paiement":
-    st.header("💰 Paiement - 2.000 FCFA - Airtel Money UNIQUEMENT")
-    nom = st.text_input("Ton nom complet :")
-    tel = st.text_input("Ton numéro Airtel :")
-    if st.button("Je confirme, je veux payer"):
-        if nom == "" or tel == "":
-            st.warning("Mets ton nom et numéro !")
-else:
+          elif menu == "💰 Paiement":
+              st.header("💰 Paiement - 2.000 FCFA - Airtel Money UNIQUEMENT")
+              nom = st.text_input("Ton nom complet :")
+              tel = st.text_input("Ton numéro Airtel :")
+              if st.button("Je confirme, je veux payer"):
+                   if nom == "" or tel == "":
+                     st.warning("Mets ton nom et numéro !")
+      else:
             
-            st.success(f"Merci {nom} !")
-            st.write("**ÉTAPE 1 : Envoie 2.000 FCFA avec *555# vers 96 75 56 49**")
-            st.write("Nom : LAOUALI - NigerAI")
-            st.write("**ÉTAPE 2 :**")
-            st.link_button("📲 Envoyer la preuve sur WhatsApp", "https://wa.me/227 96 75 56 49?text=Bonjour%20j%27ai%20pay%C3%A9%205000%20FCFA%20pour%20le%20livre%20NigerAI")
-            st.info("J'envoie le livre PDF corrigé propre en 5 min après ta capture.")
+              st.success(f"Merci {nom} !")
+              st.write("**ÉTAPE 1 : Envoie 2.000 FCFA avec *555# vers 96 75 56 49**")
+              st.write("Nom : LAOUALI - NigerAI")
+              st.write("**ÉTAPE 2 :**")
+              st.link_button("📲 Envoyer la preuve sur WhatsApp", "https://wa.me/227 96 75 56 49?text=Bonjour%20j%27ai%20pay%C3%A9%205000%20FCFA%20pour%20le%20livre%20NigerAI")
+              st.info("J'envoie le livre PDF corrigé propre en 5 min après ta capture.")
