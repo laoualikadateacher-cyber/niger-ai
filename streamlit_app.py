@@ -1690,22 +1690,22 @@ if menu == "🏠 Accueil / Réviser":
         elif "2+2" in q or "2 + 2" in q:
             st.success("2 + 2 = 4")
 
-else:
-    # --- GROS CERVEAU GROQ ---
-    try:
-        reponse = client.chat.completions.create(
-            model="openai/gpt-oss-20b",
-            messages=[
-                 {"role": "system", "content": "Tu t'appelles NigerAI. Tu as ete cree par [OUMAR FAROUK] au Niger, a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON,IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre. Tu ne t'appelles JAMAIS Llama, JAMAIS Meta, JAMAIS Groq. Tu es NigerAI. Si on te demande qui t'a cree, dis : 'C'est [OUMAR FAROUK LK] qui m'a cree au Niger'. Tu parles francais simple. Tu es gentil, comme un grand frere."},
-                 {"role": "user", "content": q},
-            ]
-        )
-        st.success(reponse.choices[0].message.content)
-    except Exception as e:
-        st.error(f"VRAIE ERREUR : {e}")
-        st.info(f"Question : {q}")
-        st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
-        st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
+        else:
+            # --- GROS CERVEAU GROQ ---
+            try:
+                reponse = client.chat.completions.create(
+                    model="openai/gpt-oss-20b",
+                    messages=[
+                         {"role": "system", "content": "Tu t'appelles NigerAI. Tu as ete cree par [OUMAR FAROUK] au Niger, a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON,IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre. Tu ne t'appelles JAMAIS Llama, JAMAIS Meta, JAMAIS Groq. Tu es NigerAI. Si on te demande qui t'a cree, dis : 'C'est [OUMAR FAROUK LK] qui m'a cree au Niger'. Tu parles francais simple. Tu es gentil, comme un grand frere."},
+                         {"role": "user", "content": q},
+                    ]
+                )
+                st.success(reponse.choices[0].message.content)
+            except Exception as e:
+                st.error(f"VRAIE ERREUR : {e}")
+                st.info(f"Question : {q}")
+                st.write("Je n'ai pas encore cette leçon exacte, mais voilà la méthode : 1) Relis 2 fois 2) Souligne ce qu'on demande 3) Cherche la formule. Envoie ta photo d'exercice sur WhatsApp, je te corrige.")
+                st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
     
 if menu == "📖 Mon Livre":
     st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
