@@ -1708,7 +1708,7 @@ if menu == "🏠 Accueil / Réviser":
                 st.divider(); st.write("Livre complet corrigé propre dans le menu : 📖 Mon Livre")
     
 if menu == "📖 Mon Livre":
-    st.head("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
+    st.header("📖 Mon Livre : Réussir au Niger - Corrigé Propre")
     st.write("Version que j'ai recorrigée pour toi. Propre, sans fautes.")
     st.write("✅ Maths corrigé étape par étape ✅ Français ✅ Histoire-Géo Niger ✅ Physique / SVT ✅ Méthode 18/20 BEPC / BAC")
     st.success("PRIX : 2.000 FCFA - PDF sur WhatsApp après paiement")
