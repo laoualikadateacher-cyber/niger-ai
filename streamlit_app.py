@@ -154,7 +154,7 @@ else:
 
 st.markdown(f"**{texte_micro}**")
 st.markdown(f"""<div style="width:120px; height:120px; background:{couleur_micro}; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:60px; margin:auto;">🎤</div>""", unsafe_allow_html=True)
-
+question_voix = ""
 question = st.text_input("Ta question :", value=question_voix)
 if st.button("Demander à NigerAI"):  
         q = question.lower().strip()
