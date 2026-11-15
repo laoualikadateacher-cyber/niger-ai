@@ -154,7 +154,7 @@ if st.button("Demander à NigerAI"):
     if q == "":
         st.warning("Écris ta question d'abord !")
     else:
-         textes_a_lire = []
+        textes_a_lire = []
         _vrai_write = st.write
         _vrai_success = st.success
         def write_qui_parle(*a, **k):
