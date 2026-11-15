@@ -1,15 +1,94 @@
 import streamlit as st
 from groq import Groq
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+from gtts import gTTS
+import tempfile
+import os
+# --- UN SEUL MORCEAU POUR FAIRE PARLER TOUT NIGERAI ---
+textes_a_lire = []
+_old_write = st.write
+_old_success = st.success
+
+def _write_parle(*a, **k):
+    for x in a:
+        if isinstance(x, str) and len(x) > 2:
+            textes_a_lire.append(x)
+    return _old_write(*a, **k)
+
+def _success_parle(*a, **k):
+    for x in a:
+        if isinstance(x, str) and len(x) > 2:
+            textes_a_lire.append(x)
+    return _old_success(*a, **k)
+
+st.write = _write_parle
+st.success = _success_parle
 st.set_page_config(page_title="NigerAI", page_icon="logo.png", layout="centered")
 st.image("logo.png", width=200)
 st.title("🇳🇪 NigerAI")
 st.write("La première IA pour réviser au Niger 🇳🇪")
 menu = st.sidebar.selectbox("MENU", ["🏠 Accueil / Réviser", "📖 Mon Livre", "💰 Paiement"])
-
 if menu == "🏠 Accueil / Réviser":
     st.header("Pose ta question sur le Niger")
-    question = st.text_input("Ta question :")
+    st.write("### 🎤 Parle à NigerAI")
+
+audio = st.audio_input("Appuie et parle ici")
+
+langue = st.selectbox("Choisis la langue :", ["Français", "Haoussa", "Anglais", "Tamasheq"])
+
+if langue == "Français":
+    code_langue = "fr"
+elif langue == "Haoussa":
+    code_langue = "ha"
+elif langue == "Anglais":
+    code_langue = "en"
+else:
+    code_langue = "fr"
+
+audio = st.audio_input("Appuie et parle ici")
+
+    # --- MICRO FOU QUI CHANGE DE COULEUR ---
+    if audio:
+        couleur_micro = "#00CC66"  # VERT = toi tu parles
+        texte_micro = "Oumar t'écoute... Parle mec 👂"
+    else:
+        couleur_micro = "#FF4B4B"  # ROUGE = il t'attend
+        texte_micro = "Oumar t'écoute..."
+
+    st.markdown(f"""
+    <style>
+    @keyframes pulse {{
+        0% {{ transform: scale(1); box-shadow: 0 0 0 0 {couleur_micro}; }}
+        70% {{ transform: scale(1.15); box-shadow: 0 0 0 25px rgba(0,0,0,0); }}
+        100% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }}
+    }}
+    .micro-fou {{
+        width: 120px;
+        height: 120px;
+        background: {couleur_micro};
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        margin: auto;
+        animation: pulse 1.2s infinite;
+    }}
+    </style>
+    <div class="micro-fou">🎤</div>
+    <p style="text-align:center; font-size:20px; font-weight:bold;">{texte_micro}</p>
+    """, unsafe_allow_html=True)
+question_voix = ""
+if audio:
+    with st.spinner("J'écoute..."):
+        transcription = client.audio.transcriptions.create(
+            file=(audio.name, audio.getvalue()),
+            model="whisper-large-v3",
+         language=code_langue
+        )
+        question_voix = transcription.text
+        st.success(f"Tu as dit : {question_voix}")
+    question = st.text_input("Ta question :", value=question_voix)
     if st.button("Demander à NigerAI"):  
         q = question.lower().strip()
         if q == "":
@@ -1689,7 +1768,16 @@ if menu == "🏠 Accueil / Réviser":
             st.success("PYTHAGORE"); st.write("Dans un triangle rectangle : a² + b² = c². Exemple : 3² + 4² = 25 = 5².")
         elif "2+2" in q or "2 + 2" in q:
             st.success("2 + 2 = 4")
-
+        # --- IL LIT TOUT CE QU'IL A ÉCRIT ---
+        if textes_a_lire:
+            texte_complet = " ".join(textes_a_lire)[-1000:]
+            tts = gTTS(text=texte_complet, lang='fr')
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as f:
+                tts.save(f.name)
+                st.audio(f.name)
+                os.unlink(f.name)
+            textes_a_lire.clear()
+        
         else:
             # --- GROS CERVEAU GROQ ---
             try:
