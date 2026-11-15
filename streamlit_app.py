@@ -114,6 +114,15 @@ with onglet2:
     if st.button("Publier ma publication"):
         st.success(f"Publié : {ton_titre}")
         st.write(ton_texte)
+    # --- CORAN ---
+    st.write("### 📖 Coran - Écoute une sourate")
+    sourate = st.selectbox("Choisis une sourate :", ["Al-Fatiha", "Al-Ikhlas", "Al-Kawthar"])
+    if sourate == "Al-Fatiha":
+        st.write("**Al-Fatiha - 1**")
+        st.write("Bismillahir Rahmanir Rahim")
+        st.write("Traduction : Au nom d'Allah, le Tout Miséricordieux...")
+        if st.button("Écouter Al-Fatiha"):
+            st.audio("https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3")
 st.write("La première IA pour réviser au Niger 🇳🇪")
 menu = st.sidebar.selectbox("MENU", ["🏠 Accueil / Réviser", "📖 Mon Livre", "💰 Paiement"])
 if menu == "🏠 Accueil / Réviser":
