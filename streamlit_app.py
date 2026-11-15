@@ -65,25 +65,6 @@ elif heure < 18:
     salutation = "Bon après-midi"
 else:
     salutation = "Bonsoir"
-# --- UN SEUL MORCEAU POUR FAIRE PARLER TOUT NIGERAI ---
-textes_a_lire = []
-_old_write = st.write
-_old_success = st.success
-
-def _write_parle(*a, **k):
-    for x in a:
-        if isinstance(x, str) and len(x) > 2:
-            textes_a_lire.append(x)
-    return _old_write(*a, **k)
-
-def _success_parle(*a, **k):
-    for x in a:
-        if isinstance(x, str) and len(x) > 2:
-            textes_a_lire.append(x)
-    return _old_success(*a, **k)
-
-st.write = _write_parle
-st.success = _success_parle
 st.set_page_config(page_title="NigerAI", page_icon="logo.png", layout="centered")
 st.image("logo.png", width=200)
 st.title("🇳🇪 NigerAI")
@@ -173,19 +154,21 @@ if st.button("Demander à NigerAI"):
     if q == "":
         st.warning("Écris ta question d'abord !")
     else:
-        try:
-            from gtts import gTTS
-            import io
-            tts = gTTS(text=reponse, lang='fr')
-            mp3 = io.BytesIO()
-            tts.write_to_fp(mp3)
-            mp3.seek(0)
-            st.audio(mp3, format="audio/mp3")
-            st.success("🎧 Oumar te parle, appuie sur Play pour l'écouter")
-        except:
-            pass
+         textes_a_lire = []
+        _vrai_write = st.write
+        _vrai_success = st.success
+        def write_qui_parle(*a, **k):
+            for x in a:
+                textes_a_lire.append(str(x))
+            return _vrai_write(*a, **k)
+        def success_qui_parle(*a, **k):
+            for x in a:
+                textes_a_lire.append(str(x))
+            return _vrai_success(*a, **k)
+        st.write = write_qui_parle
+        st.success = success_qui_parle
     question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
-    if st.button("Demander à NigerAI"):  
+    if st.button("Demander à NigerAI", key="demander_nigerai_unique"):
         q = question.lower().strip()
         if q == "":
             st.warning("Écris ta question d'abord !")
