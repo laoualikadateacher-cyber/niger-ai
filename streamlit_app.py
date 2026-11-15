@@ -15,12 +15,12 @@ if menu == "🏠 Accueil / Réviser":
         if q == "":
             st.warning("Écris ta question d'abord !")
       
-        elif "haoussa" in q or "hausa" in q:
+        elif "haoussa du niger" in q or "hausa" in q:
             st.success("LES HAOUSSA"); st.write("Plus grand groupe du Niger. Maradi, Zinder, Tahoua, Dosso. Commerce, agriculture, langue haoussa. Royaumes de Zinder et Kano.")
         elif "zarma" in q or "songhai" in q or "songhaï" in q:
             st.success("LES ZARMA-SONGHAÏ"); st.write("Le long du fleuve Niger : Niamey, Tillabéri, Dosso. Descendants de l'Empire Songhaï d'Askia Mohamed. Agriculture, pêche, savants de Tombouctou.")
         elif "touareg" in q:
-            st.success("LES TOUAREG"); st.write("Nomades du désert, Agadez, Tahoua. Turban, chameaux, traversée du Sahara. Ville d'Agadez, porte du désert. Festival de l'Aïr.")
+            st.success("LES TOUAREG"); st.write("Nomades du désert, Agadez, Tahoua. Turban, chameaux, traversée du Sahara. Ville d'Agadez, porte du désert. Festival de l'Aïr. avec leur célébre nourriture taguilla")
         elif "peul" in q or "fulani" in q:
             st.success("LES PEUL"); st.write("Éleveurs partout au Niger. Élevage des vaches, lait, transhumance. Connus pour la Wodaabe et la fête de la Gerewol.")
         elif "kanuri" in q or "boudouma" in q:
@@ -29,9 +29,9 @@ if menu == "🏠 Accueil / Réviser":
             st.success("LES TOUBOU"); st.write("Peuple du Sahara, au nord-est, vers le Djado et le Kawar. Éleveurs de chameaux, connaisseurs du désert.")
         elif "gourmantché" in q or "gourman" in q:
             st.success("LES GOURMANTCHÉ"); st.write("À l'ouest du Niger, vers Tillabéri. Agriculture, chasse, traditions.")
-        elif "fleuve" in q:
+        elif "fleuve niger" in q:
             st.success("LE FLEUVE NIGER"); st.write("4180 km, 3ème plus long d'Afrique. Passe par Niamey. Eau, pêche, agriculture, transport.")
-        elif "capitale" in q or "niamey" in q:
+        elif "capitale du niger" in q or "niamey" in q:
             st.success("NIAMEY - CAPITALE"); st.write("Capitale du Niger, sur le fleuve Niger. Plus de 1 million d'habitants. Grand Marché, Musée National, Grande Mosquée, Université Abdou Moumouni.")
         elif "agadez" in q:
             st.success("AGADEZ"); st.write("Ville du désert, au nord. Grande Mosquée en banco de 1515, 27m de haut. Porte du Sahara. Montagnes de l'Aïr, désert du Ténéré, Festival de l'Aïr.")
@@ -41,7 +41,7 @@ if menu == "🏠 Accueil / Réviser":
             st.success("MARADI"); st.write("Ville commerçante, centre du Niger. Grand marché, agriculture, arachide. Beaucoup de Haoussa.")
         elif "tahoua" in q:
             st.success("TAHOUA"); st.write("Carrefour entre nord et sud. Agriculture, élevage, commerce. Connue pour ses marchés et son artisanat.")
-        elif ("musée" in q or "musee" in q or "boubou hama" in q or "parc du w" in q or "parc de w" in q or "parc w" in q):
+        elif ("musée du niger" in q or "musee" in q or "boubou hama" in q or "parc du w" in q or "parc de w" in q or "parc w" in q):
             st.success("LE MUSÉE NATIONAL DU NIGER ET LE PARC DU W 🏛️🦁🇳🇪")
             st.write("")
             st.write("Ce sont les 2 endroits les plus célèbres pour découvrir le Niger. Un à Niamey, l'autre dans la brousse.")
@@ -93,7 +93,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**EN RÉSUMÉ :**")
             st.write("Musée National Boubou Hama = À Niamey, créé en 1959, maisons traditionnelles, zoo, dinosaures, habits, bijoux, musique.")
             st.write("Parc du W = À 150 km au sud de Niamey, créé en 1954, partagé par Niger-Bénin-Burkina, forme de W, éléphants, lions, buffles, hippopotames, Patrimoine Mondial de l'UNESCO.")
-        elif ("animal" in q or "animaux" in q or "domestique" in q or "sauvage" in q or "girafe" in q or "chameau" in q or "zébu" in q or "zebu" in q or "mouton" in q or "chèvre" in q or "chevre" in q):
+        elif ("animal du niger" in q or "animaux du niger" in q or "domestique du niger" in q or "sauvage du niger" in q or "girafe du niger" in q or "chameau du niger" in q or "zébu du nger" in q or "zebu du niger" in q or "mouton du niger" in q or "chèvre du niger" in q or "chevre du niger" in q):
             st.success("LES ANIMAUX DU NIGER : DOMESTIQUES ET SAUVAGES 🐄🦁🇳🇪")
             st.write("")
             st.write("**C'EST QUOI LA DIFFÉRENCE ?**")
@@ -166,7 +166,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**EN RÉSUMÉ :**")
             st.write("Domestiques = Zébu, mouton, chèvre, chameau, âne, cheval, poule, chien, chat.")
             st.write("Sauvages = Girafe de Kouré, éléphant, lion, gazelle, autruche, singe, hippopotame, crocodile, scorpion.")
-        elif ("mesure" in q or "lutter" in q or "contrer" in q or "reboisement" in q or "zaï" in q or "zai" in q or "demi-lune" in q or "muraille verte" in q or "protéger l'environnement" in q or "proteger l'environnement" in q):
+        elif ("mesure contre reboisement" in q or "lutter contre sécheresse" in q or "contrer la desertification" in q or "reboisement au niger" in q or "zaï au niger" in q or "zai au niger" in q or "demi-lune au au niger" in q or "muraille verte au niger" in q or "protéger l'environnement du niger" in q or "proteger l'environnement du niger" in q):
             st.success("LES MESURES POUR LUTTER CONTRE LES PROBLÈMES ENVIRONNEMENTAUX AU NIGER 🌳🇳🇪")
             st.write("")
             st.write("**1. POUR CONTRER LA DÉSERTIFICATION**")
@@ -208,7 +208,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("3. Utilise un foyer amélioré ou du gaz, pas trop de bois.")
             st.write("4. Fais un zaï ou une demi-lune dans ton champ.")
             st.write("5. Parle à tes amis, à ta famille : l'environnement, c'est notre vie.")
-        elif ("environnement" in q or "environnemental" in q or "désertification" in q or "desertification" in q or "pollution" in q or "sécheresse" in q or "secheresse" in q or "inondation" in q or "déforestation" in q or "deforestation" in q or "climat" in q):
+        elif ("environnement du niger" in q or "environnemental du niger" in q or "désertification au niger" in q or "desertification au niger" in q or "pollution au niger" in q or "sécheresse au niger" in q or "secheresse du niger" in q or "inondation au niger" in q or "déforestation du niger" in q or "deforestation au niger" in q or "climat du niger" in q):
             st.success("LES DIFFÉRENTS PROBLÈMES ENVIRONNEMENTAUX DU NIGER 🌍🇳🇪")
             st.write("")
             st.write("**C'EST QUOI UN PROBLÈME ENVIRONNEMENTAL ?**")
@@ -270,7 +270,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**EN RÉSUMÉ :**")
             st.write("Désert qui avance, pas assez de pluie, on coupe trop d'arbres, terre qui part, inondations à Niamey, manque d'eau, plastiques partout, animaux qui disparaissent.")
-        elif ("parti" in q or "election" in q or "élection" in q or "pnds" in q or "mnsd" in q or "lumana" in q or "tarayya" in q):
+        elif ("parti d'élections du niger" in q or "election du niger" in q or "élection dans le niger" in q or "pnds" in q or "mnsd" in q or "lumana" in q or "tarayya" in q):
             st.success("LES DIFFÉRENTS PARTIS D'ÉLECTIONS AU NIGER ET LEUR FONDATEUR 🇳🇪")
             st.write("")
             st.write("**ATTENTION :** Depuis le 26 mars 2025, tous les partis politiques au Niger ont été dissous. Aujourd'hui il n'y a plus de partis qui fonctionnent. On parle des anciens partis, ceux d'avant 2023.")
@@ -351,7 +351,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Kiishin Kassa = Ibrahim Yacouba.")
             st.write("CDS = Mahamane Ousmane.")
             st.write("PPN = Hamani Diori, le père de l'indépendance.")
-        elif ("ambassade" in q or "consulat" in q or "ambassadeur" in q or "visa" in q):
+        elif ("ambassade au niger" in q or "consulat du niger" in q):
             st.success("LES DIFFÉRENTES AMBASSADES AU NIGER 🏛️🇳🇪")
             st.write("")
             st.write("**C'EST QUOI UNE AMBASSADE ?**")
@@ -410,7 +410,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Amérique = USA.")
             st.write("Asie = Chine, Arabie Saoudite, Japon.")
             st.write("Tu veux voyager ? C'est à l'ambassade que ça commence.")
-        elif ("restaurant" in q or "restaurants" in q or "resto" in q or "ou manger" in q or "où manger" in q or "manger" in q or "maquis" in q or "gargote" in q or "dibi" in q):
+        elif ("restaurant au niger" in q or "restaurants au niger" in q or "resto du niger" in q or "maquis du niger" in q or "gargote du niger" in q or "dibi du niger" in q):
             st.success("LES DIFFÉRENTS RESTAURANTS AU NIGER 🍽️🇳🇪")
             st.write("")
             st.write("**AU NIGER, IL Y A 5 TYPES DE RESTAURANTS :**")
@@ -471,7 +471,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Tu veux de la viande ? Va à la Dibiterie.")
             st.write("Tu veux du rapide ? Va au Snack / Chawarma.")
             st.write("Au Niger, on ne meurt jamais de faim. Il y a toujours une gargote à côté.")
-        elif ("quartier" in q or "quartiers" in q or "différents quartiers" in q or "differents quartiers" in q or "quartiers de" in q or "quartier de" in q):
+        elif ("quartier au niger" in q or "quartiers au niger" in q or "différents quartiers de la region" in q or "differents quartiers de la region" in q):
             st.success("LES DIFFÉRENTS QUARTIERS DANS CHAQUE RÉGION DU NIGER 🏘️🇳🇪")
             st.write("")
             st.write("**1. NIAMEY - La capitale - 8 Régions : Niamey a 5 Communes**")
@@ -528,7 +528,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Zinder = Birni, Zengou, la vieille ville.")
             st.write("Agadez = Katanga, Sabon Gari.")
             st.write("Ton quartier, c'est ta famille. Tu le connais par cœur.")
-        elif ("meilleur reseau" in q or "meilleurs reseaux" in q or "meilleur réseau" in q or "meilleurs réseaux" in q or "reseau" in q or "réseau" in q or "operateur" in q or "opérateur" in q or "airtel" in q or "moov" in q or "zamani" in q or "orange" in q or "telecel" in q):
+        elif ("meilleur reseau au niger" in q or "meilleurs reseaux au niger" in q or "meilleur réseau au niger" in q or "meilleurs réseaux au niger" in q or "reseau au niger" in q or "réseau du niger" in q or "operateur de niger" in q or "opérateur de niger" in q or "airtel" in q or "moov" in q or "zamani" in q or "orange" in q or "telecel" in q):
             st.success("LES MEILLEURS RÉSEAUX AU NIGER 📱🇳🇪")
             st.write("")
             st.write("**AU NIGER, IL Y A 3 GRANDS RÉSEAUX :**")
@@ -581,7 +581,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Tu veux payer moins cher pour Internet ? Prends MOOV.")
             st.write("Tu es à Niamey et tu veux des promos ? Essaie ZAMANI.")
             st.write("Le meilleur conseil des Nigériens : Avoir 2 puces, une Airtel + une Moov. Comme ça, si l'un coupe, l'autre marche.")
-        elif ("association islamique" in q or "association islamique du niger" in q or "ain" in q or "association musulmane" in q or "conseil islamique" in q):
+        elif ("association islamique du niger" in q or "association islamique du niger" in q or "ain" in q or "association musulmane du niger" in q or "conseil islamique au niger" in q):
             st.success("L'ASSOCIATION ISLAMIQUE DU NIGER 🕌🇳🇪")
             st.write("")
             st.write("**AIN = ASSOCIATION ISLAMIQUE DU NIGER**")
@@ -633,7 +633,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Créée en 1974, siège à Niamey.")
             st.write("Elle annonce le Ramadan, la Tabaski, organise le Hadj, aide les pauvres.")
             st.write("Si tu es musulman au Niger, tu connais l'AIN, même si tu n'es pas membre.")
-        elif ("marabout" in q or "marabouts" in q or "malam" in q or "mallam" in q or "cheikh" in q or "cheick" in q or "ouléma" in q or "oulema" in q or "imam" in q):
+        elif ("marabout du niger" in q or "marabouts de niger" in q or "malam du niger" in q or "mallam du niger" in q or "cheikh du niger" in q or "cheick du niger" in q or "ouléma" in q or "oulema" in q or "imam du niger" in q):
             st.success("LES MARABOUTS DU NIGER 🙏🇳🇪")
             st.write("")
             st.write("**C'EST QUOI UN MARABOUT ?**")
@@ -685,7 +685,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Makaranta = Son école coranique.")
             st.write("Vrai marabout = Il enseigne, il conseille, il réconcilie.")
             st.write("Faux marabout = Il arnaque avec l'argent et la peur.")
-        elif (" seen " in " " + q + " " or "seen du niger" in q or "la seen" in q or "spen" in q or "societe d exploitation des eaux" in q or "société d'exploitation des eaux" in q or "eau du robinet" in q or "eau potable" in q or "facture d eau" in q or "facture d'eau" in q or "coupure d eau" in q or "coupure d'eau" in q or "pas d eau" in q or "pas d'eau" in q or "borne fontaine" in q or "borne-fontaine" in q or "chateau d eau" in q or "château d'eau" in q or "robinet" in q):
+        elif (" seen " in " " + q + " " or "seen du niger" in q or "la seen" in q or "spen du niger" in q or "societe d exploitation des eaux du niger" in q or "société d'exploitation des eaux du niger" in q or "eau du robinet au niger" in q or "eau potable au niger" in q or "facture d eau au niger" in q or "facture d'eau au niger" in q or "coupure d eau au niger" in q or "coupure d'eau au niger" in q or "pas d eau au niger" in q or "pas d'eau au niger" in q or "borne fontaine au niger" in q or "borne-fontaine au niger" in q or "chateau d eau du niger" in q or "château d'eau du niger" in q or "robinet au niger" in q):
             st.success("LA SEEN DU NIGER 💧🇳🇪")
             st.write("")
             st.write("**SEEN = SOCIÉTÉ D'EXPLOITATION DES EAUX DU NIGER**")
@@ -735,7 +735,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("SPEN = L'État qui possède les châteaux et les tuyaux.")
             st.write("Fleuve + Forages + Châteaux = D'où vient l'eau.")
             st.write("Pas de courant = Pas d'eau. Les deux sont liés.")
-        elif ("nigelec" in q or "electricite" in q or "électricité" in q or "cash power" in q or "cashpower" in q or "kandadji" in q or "gorou banda" in q or "delestage" in q or "délestage" in q or "coupure de courant" in q or "coupure d electricite" in q or "coupure d'électricité" in q or "pas de courant" in q or "panne de courant" in q or ("courant" in q and ("facture" in q or "compteur" in q or "nigelec" in q or "coupe" in q or "couper" in q))):
+        elif ("nigelec" in q or "electricite du niger" in q or "électricité du niger" in q or "cash power of niger" in q or "cashpower du niger" in q or "kandadji" in q or "gorou banda" in q or "delestage du niger" in q or "délestage du niger" in q or "coupure de courant au niger" in q or "coupure d electricite au niger" in q or "coupure d'électricité au niger" in q or "pas de courant au niger" in q or "panne de courant au niger" in q or ("courant au niger" in q and ("facture nigelec" in q or "nigelec" in q or "coupe de nigelec" in q))):
             st.success("L'ÉLECTRICITÉ AU NIGER - NIGELEC 💡🇳🇪")
             st.write("")
             st.write("**NIGELEC = SOCIÉTÉ NIGÉRIENNE D'ÉLECTRICITÉ**")
@@ -783,7 +783,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Cash Power = Tu paies avant de consommer.")
             st.write("Facture = Tu paies après avoir consommé.")
             st.write("Coupure = Souvent délestage en saison chaude, ou panne.")
-        elif ("station service" in q or "station-service" in q or "station d'essence" in q or "station essence" in q or "station de carburant" in q or "station a essence" in q or "station à essence" in q or "sonidep" in q or "totalenergies" in q or "oryx" in q or "pompe a essence" in q or "pompe à essence" in q or ("station" in q and ("essence" in q or "carburant" in q or "gasoil" in q or "gerant" in q or "gérant" in q or "pompiste" in q))):
+        elif ("station service au niger" in q or "station-service au niger" in q or "station d'essence au niger" in q or "station essence au niger" in q or "station de carburant au niger" in q or "station a essence au niger" in q or "station à essence au niger" in q or "sonidep" in q or "totalenergies" in q or "oryx" in q or "pompe a essence" in q or "pompe à essence" in q or ("station au niger" in q and ("essence du niger" in q or "carburant du niger" in q or "gasoil du niger" in q or "gerant au niger" in q or "gérant au niger" in q or "pompiste au niger" in q))):
             st.success("LES DIFFÉRENTES STATIONS-SERVICE AU NIGER ⛽🇳🇪")
             st.write("")
             st.write("**AU NIGER, IL Y A 2 TYPES DE STATIONS :**")
@@ -874,7 +874,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Tu es élève à Abalak, Tahoua, Niamey ? Tu es déjà membre de l'USN, même si tu ne le sais pas.")
             st.write("L'USN, c'est ta voix. Sans USN, personne n'écoute les élèves.")
             st.write("Mais attention : l'USN, c'est pour défendre, pas pour casser. Un bon militant USN, c'est celui qui défend ses droits ET qui réussit ses études.")  
-        elif ("cours d'eau" in q or "cours deau" in q or "cours d’eau" in q or "riviere" in q or "rivière" in q or "fleuve" in q or " lac " in q or " lacs " in q or " lac tchad" in q or "komadougou" in q or "dallol" in q or "goulbi" in q or "tapoa" in q or "mekrou" in q or "mékrou" in q) and ("niger" in q or "trouver" in q or "differents" in q or "différents" in q or "quels" in q or "parlons" in q):
+        elif ("cours d'eau du niger" in q or "cours deau au niger" in q or "cours d’eau au niger" in q or "riviere au niger" in q or "rivière au niger" in q or "fleuve niger" in q or " lac tchad " in q or " lacs tchad " in q or " lac tchad" in q or "komadougou" in q or "dallol" in q or "goulbi" in q or "tapoa" in q or "mekrou" in q or "mékrou" in q) and ("niger" in q or "trouver" in q or "differents" in q or "différents" in q or "quels" in q or "parlons" in q):
             st.success("LES DIFFÉRENTS COURS D'EAU AU NIGER 💧🇳🇪")
             st.write("")
             st.write("**LE NIGER EST UN PAYS SEC, MAIS IL A DE L'EAU :**")
@@ -924,7 +924,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**POURQUOI C'EST IMPORTANT ?**")
             st.write("Au Niger, 80% des gens vivent de l'agriculture et de l'élevage. Sans fleuve, sans mare, sans puits, pas de mil, pas de bétail, pas de vie.")
-        elif ("saison" in q or "saisons" in q or "hivernage" in q or "climat" in q) and ("football" not in q and "manif" not in q and "manifestation" not in q):
+        elif ("saison du niger" in q or "saisons du niger" in q or "hivernage au niger" in q or "climat du niger" in q) and ("football" not in q and "manif" not in q and "manifestation" not in q):
             st.success("LES DIFFÉRENTES SAISONS AU NIGER ☀️🌧️🇳🇪")
             st.write("")
             st.write("**AU NIGER, IL Y A 3 GRANDES SAISONS :**")
@@ -955,7 +955,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**POURQUOI C'EST IMPORTANT ?**")
             st.write("Au Niger, si l'hivernage est bon, tout le monde mange. Si l'hivernage est mauvais, c'est la famine. La pluie, c'est la vie.")
             st.write("C'est pour ça qu'on dit : 'Le Niger, c'est le pays où on attend la pluie comme on attend un bébé.'")
-        elif (("places" in q or "place" in q) and ("niger" in q or "concertation" in q or "toumo" in q or "resistance" in q or "résistance" in q or "liptako" in q or "independance" in q or "indépendance" in q) and ("classement" not in q and "rang" not in q and "placer" not in q and "place de mon" not in q)):
+        elif (("places du niger" in q or "place niger" in q) and ("niger" in q or "concertation" in q or "toumo" in q or "resistance du niger" in q or "résistance du niger" in q or "liptako" in q or "independance du niger" in q or "indépendance du niger" in q) and ("classement" not in q and "rang" not in q and "placer" not in q and "place de mon" not in q)):
             st.success("LES PLACES DU NIGER 📍🇳🇪")
             st.write("")
             st.write("**LES PLACES DE NIAMEY - LA CAPITALE :**")
@@ -979,7 +979,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**EN RÉSUMÉ :**")
             st.write("Au Niger, chaque ville a sa Place de l'Indépendance. Mais à Niamey, la vraie place qui décide, c'est la Place de la Concertation.")
             st.write("Tu veux manifester ? Concertation. Tu veux acheter oignons d'Agadez ? Toumo. Tu veux voir monument AES ? Liptako-Gourma.")
-        elif (("nombre" in q or "combien" in q or "population" in q) and ("region" in q or "région" in q or "regions" in q or "régions" in q) and ("niger" in q or "chaque" in q or "par region" in q or "par région" in q) and ("etablissement" not in q and "établissement" not in q and "universite" not in q and "université" not in q)):
+        elif (("nombre du niger" in q or "combien du population" in q or "population du niger" in q) and ("region" in q or "région" in q or "regions" in q or "régions" in q) and ("niger" in q or "chaque" in q or "par region" in q or "par région" in q) and ("etablissement" not in q and "établissement" not in q and "universite" not in q and "université" not in q)):
             st.success("POPULATION DE CHAQUE RÉGION DU NIGER 👨‍👩‍👧‍👦🇳🇪")
             st.write("")
             st.write("**TOTAL NIGER : Environ 28,8 millions en 2026 (27,9 millions en 2025)**")
@@ -1104,7 +1104,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**EN RÉSUMÉ :**")
             st.write("Tanat = Fondateur connu, Billou. Écoles publiques = Fondateur c'est l'État du Niger. Écoles privées = Fondateur c'est une famille / un promoteur. Proviseur = Nommé par le Ministère, il change.")
-        elif "meilleur établissement" in q or "meilleure école" in q or "meilleur ecole" in q or "établissement" in q or "etablissement" in q or "meilleur lycée" in q or "meilleur lycee" in q or "meilleure université" in q or "meilleure universite" in q:
+        elif "meilleur établissement du niger" in q or "meilleure école du niger" in q or "meilleur ecole du niger" in q or "établissement du niger" in q or "etablissement nigerien" in q or "meilleur lycée au niger" in q or "meilleur lycee au niger" in q or "meilleure université du niger" in q or "meilleure universite au niger" in q:
             st.success("LES MEILLEURS ÉTABLISSEMENTS DU NIGER 🏆🇳🇪")
             st.write("")
             st.write("**LES MEILLEURS LYCÉES / COLLÈGES :**")
@@ -1139,7 +1139,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**5. Hôpital de Tahoua / CSI Abalak** - Pour Tahoua et Abalak.")
             st.write("")
             st.write("Et pour nous, le meilleur établissement reste TANAT, parce que c'est là qu'on a grandi !")
-        elif "tiktok" in q or "tiktokeur" in q or "tiktokeuse" in q or "influenceur" in q or "fati niger" in q or "bara pro" in q or "ousmane majo" in q:
+        elif "tiktok niger" in q or "tiktokeur du niger" in q or "tiktokeuse du niger" in q or "influenceur du niger" in q or "fati niger" in q or "bara pro" in q or "ousmane majo" in q:
             st.success("LES TIKTOKEURS DU NIGER 📱🇳🇪")
             st.write("")
             st.write("**LES COMÉDIENS - LES PLUS CONNUS :**")
@@ -1169,7 +1169,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**Les filles TikTok** - Danse, maquillage, mode, secret de femme nigérienne.")
             st.write("")
             st.write("Au Niger, TikTok c'est devenu la télé des jeunes. Comédie, musique, news, tout passe par là. Si tu n'es pas sur TikTok, tu as raté la blague de la journée !")
-        elif "relief" in q or "montagne" in q or "désert" in q or "desert" in q or "colline" in q or "plateau" in q or "aïr" in q or "air" in q and "montagne" in q or "ténéré" in q or "tenere" in q or "djado" in q or "termit" in q:
+        elif "relief du niger" in q or "montagne du niger" in q or "désert du niger" in q or "desert du niger" in q or "colline du niger" in q or "plateau du niger" in q or "aïr du niger" in q or "air montagné" in q and "montagne de l'air" in q or "ténéré" in q or "tenere" in q or "djado" in q or "termit" in q:
             st.success("LES RELIEFS DU NIGER 🏔️🇳🇪")
             st.write("")
             st.write("Le Niger, c'est pas que du plat ! Il y a 3 grandes zones :")
@@ -1195,7 +1195,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**EN RÉSUMÉ :**")
             st.write("Nord = Montagnes + Désert. Centre = Plateaux + Collines. Sud = Plaines + Fleuve. C'est pour ça que le Niger est si grand et si différent d'une région à l'autre.")
-        elif "aéroport" in q or "aeroport" in q or "avion" in q or "diori" in q or "manu dayak" in q or "mano dayak" in q or "piste" in q or "vol" in q:
+        elif "aéroport du niger" in q or "aeroport du niger" in q or "avion du niger" in q or "diori" in q or "manu dayak" in q or "mano dayak du niger" in q or "piste du niger" in q or "vol au niger" in q:
             st.success("LES DIFFÉRENTS AÉROPORTS DU NIGER ✈️🇳🇪")
             st.write("")
             st.write("**LES GRANDS AÉROPORTS INTERNATIONAUX :**")
@@ -1220,7 +1220,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Abalak n'a pas de grand aéroport. Les gens d'Abalak prennent l'avion à Tahoua (150 km) ou à Niamey. Sinon, piste de terre pour petits avions humanitaires.")
             st.write("")
             st.write("Au total le Niger a plus de 20 aéroports et aérodromes, mais seulement 2 sont vraiment internationaux : Niamey et Agadez.")
-        elif "commerçant" in q or "commercant" in q or "marché" in q or "marche" in q or "commerce" in q or "vendeur" in q or "katako" in q or "grand marché" in q:
+        elif "commerçant du niger" in q or "commercant du niger" in q or "marché au niger" in q or "marche du niger" in q or "commerce au niger" in q or "vendeur du niger" in q or "katako du niamey" in q or "grand marché de niamey" in q:
             st.success("LES COMMERÇANTS ET LES GRANDS MARCHÉS DU NIGER 🛒🇳🇪")
             st.write("")
             st.write("**LES DIFFÉRENTS COMMERÇANTS :**")
@@ -1250,7 +1250,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**8. Marché de Diffa** - Poissons du Lac Tchad, poivron.")
             st.write("**9. Marché d'Abalak** - Marché à bétail, chèvres, moutons, chameaux. Jour de marché : dimanche.")
             st.write("**10. Marché de Tillabéri** - Riz, poissons du fleuve.")
-        elif ("fondateur" in q and "tanat" in q) or "proviseur" in q or "billou" in q or "hassane moumouni" in q or "moussa samaila" in q:
+        elif ("fondateur du tanat" in q and "tanat" in q) or "proviseur du csp tanat" in q or "billou" in q or "hassane moumouni" in q or "moussa samaila" in q:
             st.success("FONDATEUR ET PROVISEURS DE TANAT 🏫🇳🇪")
             st.write("")
             st.write("**FONDATEUR DE TANAT :**")
@@ -1269,7 +1269,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Il a dit : 'TANAT, c'est un établissement modèle, une école de référence au Niger.'")
             st.write("")
             st.write("Respect à Billou, à Hassane Moumouni et à Moussa Samaila !")
-        elif "tanat" in q or "école" in q and "abalak" in q or "onodep" in q:
+        elif "tanat" in q or "école tanat" in q and "abalak csp tanat" in q or "onodep" in q:
             st.success("TANAT - L'ÉCOLE D'ABALAK 🏫🇳🇪")
             st.write("**Tanat, c'est l'école où a étudié le fondateur de Niger IA.**")
             st.write("")
@@ -1292,7 +1292,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**Le projet :** Accueillir les enfants sans distinction, les aider à réussir, surtout les enfants de familles nomades, Touareg, Peul, Haoussa d'Abalak.")
             st.write("")
             st.write("C'est à Tanat que tout a commencé pour Niger IA. Respect à Tanat !")
-        elif "fondateur" in q or "fondateurs" in q or "créateur" in q or "createur" in q or "qui a créé" in q or "qui a cree" in q or "niger ia" in q or "oumar" in q or "farouk" in q or "roudayna" in q or "teacher" in q:
+        elif "fondateur du nigerai" in q or "fondateurs du nigerAI" in q or "créateur" in q or "createur" in q or "qui a créé" in q or "qui a cree" in q or "niger ia" in q or "oumar" in q or "farouk" in q or "roudayna" in q or "teacher" in q:
             st.success("LES FONDATEURS DE NIGER IA 🇳🇪⭐")
             st.write("")
             st.write("**1. OUMAR FAROUK**")
@@ -1311,7 +1311,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Que chaque enfant du Niger ait accès au savoir, avec son téléphone.")
             st.write("")
             st.write("Respect aux fondateurs ! Oumar Farouk, LK Teacher et Roudayna - des vrais patriotes.")
-        elif "royaume" in q or "royaumes" in q or "empire" in q or "histoire" in q or "gobir" in q or "damagaram" in q or "katsina" in q or "dosso" in q and "royaume" in q:
+        elif "royaume du niger" in q or "royaumes du niger" in q or "empire du niger" in q or "histoire du niger" in q or "gobir" in q or "damagaram" in q or "katsina" in q or "dosso" in q and "royaume" in q:
             st.success("LES DIFFÉRENTS ROYAUMES AU NIGER 👑🇳🇪")
             st.write("Avant le Niger d'aujourd'hui, il y avait de grands royaumes et empires.")
             st.write("")
@@ -1340,7 +1340,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("À l'Est, vers le Lac Tchad. Grand empire du Kanem-Bornou. Roi : Maï Idriss Alaoma.")
             st.write("")
             st.write("Ces royaumes sont nos ancêtres. C'est pour ça qu'au Niger on a des Sultans, des Chefs, des Zarmakoye jusqu'à aujourd'hui.")
-        elif "jeunesse" in q or "jeune" in q or "jeunes" in q or "enfant" in q or "enfants" in q or "ado" in q:
+        elif "jeunesse du niger" in q or "jeune nigerien" in q or "jeunes du niger" in q or "enfant du niger" in q or "enfants du niger" in q or "ado" in q:
             st.success("LA JEUNESSE DU NIGER 🇳🇪❤️")
             st.write("Le Niger est le pays le plus jeune du monde !")
             st.write("Plus de 50% des Nigériens ont moins de 15 ans. La jeunesse c'est l'avenir du Niger.")
@@ -1363,7 +1363,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**Devise pour la jeunesse :**")
             st.write("Étudie, travaille, respecte tes parents, aime ton pays. Le Niger compte sur toi.")
-        elif "lutter" in q or "lutte" in q and "maladie" in q or "prévenir" in q or "prévention" in q or "comment" in q and "maladie" in q or "soigner" in q or "éviter" in q:
+        elif "lutter contre les maladies" in q or "lutte maladadie" in q and "maladie" in q or "prévenir" in q or "prévention du maladie" in q or "comment les maladies" in q and "maladie" in q or "soigner les maladies" in q:
             st.success("COMMENT LUTTER CONTRE LES MALADIES AU NIGER 💪🇳🇪")
             st.write("")
             st.write("**1. CONTRE LE PALUDISME**")
@@ -1401,7 +1401,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**LA RÈGLE D'OR :**")
             st.write("Prévenir c'est mieux que guérir. Moustiquaire + Eau propre + Savon + Vaccin = Tu es protégé.")
             st.write("Si tu es malade, va vite au CSI ou à l'hôpital le plus proche.")
-        elif "maladie" in q or "maladies" in q or "paludisme" in q or "choléra" in q or "cholera" in q or "méningite" in q or "tuberculose" in q or "rougeole" in q or "sida" in q:
+        elif "maladie au niger" in q or "maladies du niger" in q or "paludisme au niger" in q or "choléra au niger" in q or "cholera au niger" in q or "méningite au niger" in q or "tuberculose au niger" in q or "rougeole au niger" in q or "sida au niger" in q:
             st.success("LES DIFFÉRENTES MALADIES AU NIGER 🤒🇳🇪")
             st.write("")
             st.write("**1. PALUDISME - La plus fréquente**")
@@ -1429,7 +1429,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Maladie transmise par le sang et les rapports non protégés. Dépistage gratuit et traitement au Centre de Santé.")
             st.write("")
             st.write("Si tu es malade : va vite au CSI le plus proche, ne reste pas à la maison. La santé c'est la vie.")
-        elif "santé" in q or "sante" in q or "hôpital" in q or "hopital" in q or "maladie" in q or "médecin" in q or "docteur" in q or "paludisme" in q:
+        elif "santé au niger" in q or "sante au niger" in q or "hôpital du niger" in q or "hopital du niger" in q or "maladie cas du niger" in q or "docteur du niger" in q or "paludisme au niger" in q:
             st.success("LA SANTÉ AU NIGER 🏥🇳🇪")
             st.write("**Comment on se soigne au Niger ?**")
             st.write("")
@@ -1450,7 +1450,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("- Diarrhée, malnutrition chez les enfants")
             st.write("")
             st.write("**Pour se protéger :** Dormir sous moustiquaire, boire de l'eau propre, se laver les mains, se faire vacciner.")
-        elif "général" in q or "general" in q or "chef" in q and "armée" in q or "commandant" in q:
+        elif "général du niger" in q or "general du niger" in q or "chef armée" in q or "commandant" in q:
             st.success("LES CHEFS DE CHAQUE FORCE AU NIGER 🇳🇪 - 2026")
             st.write("**Chef Suprême :** Président Général d'Armée Abdourahamane Tiani")
             st.write("**Ministre de la Défense :** Général d'Armée Salifou Mody")
@@ -1471,7 +1471,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**7. Eaux et Forêts : Colonel Soumaïla Laouali - Directeur Général**")
             st.write("")
             st.write("Attention : ces chefs changent par décret du Président. Si ça change, on met à jour.")
-        elif "armée" in q or "armee" in q or "forces" in q or "soldat" in q or "gendarmerie" in q or "police" in q or "garde" in q or "militaire" in q:
+        elif "armée du niger" in q or "armee du nigerien" in q or "FAN" in q or "soldat du niger" in q or "gendarmerie national du niger" in q or "police du niger" in q or "garde national" in q or "militaire du niger" in q:
             st.success("LES DIFFÉRENTES FORCES ARMÉES AU NIGER 🇳🇪")
             st.write("On les appelle les FDS : Forces de Défense et de Sécurité.")
             st.write("")
@@ -1494,7 +1494,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("Ils protègent les arbres, les forêts, les animaux, contre la coupe illégale.")
             st.write("")
             st.write("**Le Chef de toutes les forces :** Le Président de la République, Chef de l'État, Général d'Armée Abdourahamane Tiani.")
-        elif "tenue" in q or "habit" in q or "habillement" in q or "boubou" in q or "pagne" in q or "vetement" in q or "vêtement" in q:
+        elif "tenue au niger" in q or "habit du niger" in q or "habillement des nigeriennes" in q or "boubou" in q or "pagne wax" in q or "vetement du niger" in q or "vêtement du niger" in q:
             st.success("LES DIFFÉRENTES TENUES AU NIGER 👘🇳🇪")
             st.write("**1. Le Boubou - Pour les hommes**")
             st.write("Grand habit large et long. En bazin, en brodé. C'est l'habit des fêtes, du mariage, de la Tabaski, du vendredi à la mosquée.")
@@ -1514,7 +1514,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**6. Tenue moderne :** Jean, T-shirt, robe. Surtout à Niamey pour les jeunes et à l'école.")
             st.write("")
             st.write("Au Niger, la tenue montre ton ethnie, ta région et si c'est un jour de fête ou un jour normal.")
-        elif "sécurité" in q or "securite" in q or "armée" in q or "armee" in q or "militaire" in q or "terrorisme" in q or "boko" in q or "aes" in q:
+        elif "sécurité au niger" in q or "securite au niger" in q or "armée nigerien" in q or "armee nigerien" in q or "militaire nigerien" in q or "terrorisme du niger" in q or "boko" in q or "aes" in q:
             st.success("LA SÉCURITÉ AU NIGER 🇳🇪")
             st.write("**Qui protège le Niger ?**")
             st.write("Les FDS : Forces de Défense et de Sécurité. C'est l'Armée, la Gendarmerie, la Garde Nationale, la Police.")
@@ -1531,7 +1531,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**Le rôle du citoyen :**")
             st.write("Si tu vois quelque chose de bizarre, tu préviens les autorités, le chef de quartier, le chef de village. La sécurité c'est l'affaire de tout le monde.")
             st.write("Devise : L'Union fait la force.")
-        elif "gouverneur" in q or "gouverneurs" in q:
+        elif "gouverneur du niger" in q or "gouverneurs du niger" in q:
             st.success("LES GOUVERNEURS DES 8 RÉGIONS DU NIGER 🇳🇪 - 2026")
             st.write("**1. Agadez : Général de Division Ibra Boulama Issa**")
             st.write("**2. Diffa : Général Ibrahim Bagadoma**")
@@ -1544,7 +1544,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("Le Gouverneur c'est le chef de la région. Il représente le Président dans sa région.")
             st.write("Pour Abalak : c'est le Gouverneur de Tahoua qui est son chef, et Abalak a son Préfet.")
-        elif "préfet" in q or "prefet" in q:
+        elif "préfet du niger" in q or "prefet nigrien" in q:
             st.success("PRÉFET ET GOUVERNEUR - C'EST QUOI ?")
             st.write("Gouverneur = Chef de la RÉGION (ex: Tahoua)")
             st.write("Préfet = Chef du DÉPARTEMENT (ex: Abalak)")
@@ -1560,7 +1560,7 @@ if menu == "🏠 Accueil / Réviser":
             st.write("**Culture :** Fêtes touarègues, musique du désert, artisanat, élevage nomade.")
             st.write("")
             st.write("**Les autres départements de Tahoua :** Tahoua, Abalak, Birni N'Konni, Bouza, Illéla, Keita, Madaoua, Malbaza, Tchintabaraden, Tillia.")
-        elif "département" in q or "departement" in q or "région" in q or "region" in q:
+        elif "département du niger" in q or "departement de konni" in q or "région du niger" in q or "region du niger" in q:
             st.success("LES 8 RÉGIONS DU NIGER")
             st.write("1. Niamey 2. Agadez 3. Diffa 4. Dosso 5. Maradi 6. Tahoua 7. Tillabéri 8. Zinder")
             st.write("Chaque région est divisée en départements. Exemple : Tahoua = Abalak, Keita, Madaoua, Konni, etc.")
@@ -1571,23 +1571,23 @@ if menu == "🏠 Accueil / Réviser":
             st.success("DIFFA"); st.write("À l'est, près du Lac Tchad. Kanuri, Boudouma. Pêche, agriculture, élevage.")
         elif "tillabéri" in q or "tillaberi" in q:
             st.success("TILLABÉRI"); st.write("Sur le fleuve, au nord de Niamey. Zarma-Songhaï. Agriculture, barrage de Kandadji.")
-        elif "uranium" in q or "arlit" in q:
+        elif "uranium du niger" in q or "arlit" in q:
             st.success("L'URANIUM D'ARLIT"); st.write("Le Niger est un des grands producteurs d'uranium au monde. Mines à Arlit et Akouta, dans le nord. L'uranium sert à faire de l'électricité nucléaire.")
-        elif "petrole" in q or "pétrole" in q:
+        elif "petrole du niger" in q or "pétrole du niger" in q:
             st.success("LE PÉTROLE DU NIGER"); st.write("Pétrole découvert à Agadem, dans l'est. Raffinerie de Zinder (SORAZ). Le Niger produit son propre carburant.")
-        elif "éducation" in q or "education" in q or "école" in q or "ecole" in q:
+        elif "éducation du niger" in q or "education du niger" in q or "école du niger" in q or "ecole du niger" in q:
             st.success("L'ÉDUCATION AU NIGER")
             st.write("Système : Primaire 6 ans (CI au CM2), Collège 4 ans (6ème à 3ème), Lycée 3 ans (2nde à Terminale). Langue d'enseignement : Français. On apprend aussi les langues nationales.")
-        elif "bepc" in q:
+        elif "bpc du niger" in q:
             st.success("LE BEPC AU NIGER")
             st.write("BEPC = Brevet d'Études du Premier Cycle. Examen après la 3ème. Pour réussir : Maths, Français, Physique, Histoire-Géo, SVT, Anglais. Il faut réviser les annales et faire les exercices corrigés du livre.")
-        elif "bac" in q:
+        elif "bac du niger" in q:
             st.success("LE BAC AU NIGER")
             st.write("BAC = après la Terminale. Séries : A, C, D. A = Littéraire, C = Maths-Physique, D = Sciences. Le BAC ouvre la porte à l'Université Abdou Moumouni de Niamey et aux grandes écoles.")
-        elif "université" in q or "universite" in q:
+        elif "université nigerien" in q or "universite nigerien" in q:
             st.success("L'UNIVERSITÉ AU NIGER")
             st.write("Université Abdou Moumouni à Niamey (la plus grande), Université de Zinder, de Maradi, de Tahoua, de Dosso. Facultés : Sciences, Lettres, Droit, Médecine, Agronomie.")
-        elif "autorité" in q or "autorite" in q or "président" in q or "president" in q or "gouvernement" in q or "tiani" in q or "premier ministre" in q:
+        elif "autorité du niger" in q or "autorite du niger" in q or "président du niger" in q or "president du niger" in q or "tiani" in q or "premier ministre du niger" in q:
             st.success("LES AUTORITÉS DU NIGER 🇳🇪 - 2026")
             st.write("**Président de la République, Chef de l'État : Général d'Armée Abdourahamane Tiani**")
             st.write("Président du CNSP, devenu Président de la République en mars 2025.")
@@ -1608,18 +1608,18 @@ if menu == "🏠 Accueil / Réviser":
             st.write("6. Mahamadou Issoufou (2011-2021)")
             st.write("7. Mohamed Bazoum (2021-2023)")
             st.write("8. Abdourahamane Tiani (depuis 2023)")
-        elif "prof" in q or "enseignant" in q:
+        elif "prof du niger" in q or "enseignant au niger" in q:
             st.success("LES ENSEIGNANTS AU NIGER")
             st.write("Les enseignants forment les élèves du primaire au lycée. Ils enseignent en français, avec les programmes du Ministère de l'Éducation Nationale du Niger.")  
-        elif "drapeau" in q:
+        elif "drapeau du niger" in q:
             st.success("LE DRAPEAU DU NIGER"); st.write("3 bandes : Orange en haut = Sahara, Blanc au milieu = fleuve, Vert en bas = agriculture. Rond orange au milieu = soleil.")
-        elif "hymne" in q or "histoire" in q and "niger" in q:
+        elif "hymne national du niger" in q or "histoire du niger" in q:
             st.success("HISTOIRE DU NIGER"); st.write("Indépendance : 3 Août 1960, de la France. Premier président : Hamani Diori. Avant : Empires Songhaï, Bornou, royaumes Haoussa. Fête nationale : 18 Décembre 1958 (République) et 3 Août (Indépendance).")
-        elif "langue" in q:
+        elif "langue du niger" in q:
             st.success("LES LANGUES DU NIGER"); st.write("Français = langue officielle. Langues nationales : Haoussa (la plus parlée), Zarma, Touareg (Tamasheq), Peul (Fulfulde), Kanuri, Arabe, Gourmantché, Toubou.")
-        elif "manger" in q or "nourriture" in q or "plat" in q:
+        elif "manger au niger" in q or "nourriture du niger" in q or "plat nigerien" in q:
             st.success("LA NOURRITURE AU NIGER"); st.write("Plats : Tuwo (pâte de mil), Dambou, Riz sauce, Fari masa, Kilichi (viande séchée), Brochettes, Dégué.")
-        elif "religion" in q or "islam" in q or "musulman" in q or "chrétien" in q or "chretien" in q or "prière" in q or "priere" in q:
+        elif "religion au niger" in q or "islam" in q or "musulman du niger" in q or "chrétien du niger" in q or "chretien du niger" in q or "prière nigerien" in q or "priere nigerien" in q:
             st.success("LA RELIGION AU NIGER")
             st.write("Au Niger, environ 99% sont Musulmans. C'est un pays à majorité musulmane.")
             st.write("Islam : La religion principale. Mosquées partout, Grande Mosquée de Niamey, Grande Mosquée d'Agadez. Fêtes : Ramadan, Tabaski (Aïd El Kebir), Maouloud.")
@@ -1632,7 +1632,7 @@ if menu == "🏠 Accueil / Réviser":
         elif "tabaski" in q:
             st.success("LA TABASKI AU NIGER")
             st.write("Grande fête musulmane. On égorge un mouton en souvenir d'Ibrahim. On partage la viande avec la famille, les voisins et les pauvres. On porte les beaux habits.")
-        elif "proverbe" in q or "dicton" in q or "sagesse" in q:
+        elif "proverbe nigerien" in q or "dicton des nigeriennes" in q or "sagesse du peuple du niger" in q:
             st.success("LES PROVERBES NIGÉRIENS 🇳🇪")
             st.write("**1. Haoussa :** *Hannu daya baya daukar jinka*")
             st.write("→ Une seule main ne peut pas soulever une charge. Ça veut dire : il faut s'entraider.")
@@ -1648,10 +1648,10 @@ if menu == "🏠 Accueil / Réviser":
             st.write("")
             st.write("**5. Proverbe du Niger :** *Si tu veux aller vite, marche seul. Si tu veux aller loin, marche ensemble.*")
             st.write("→ C'est le proverbe le plus important pour réussir à l'école.")
-        elif "conte" in q or "histoire" in q and "raconter" in q:
+        elif "conte du niger" in q and "raconter IA" in q:
             st.success("CONTE NIGÉRIEN")
             st.write("Il était une fois, dans un village du Niger, un jeune garçon qui voulait devenir savant. Chaque jour il allait à l'école, il aidait sa mère, il respectait les anciens. Un jour, il est devenu le plus grand maître du village. Morale : le travail et le respect mènent loin.")
-        elif "musicien" in q or "musique" in q or "chanteur" in q or "chanson" in q or "artiste" in q:
+        elif "musicien du niger" in q or "musique au niger" in q or "chanteur du niger" in q or "chanson du niger" in q or "artiste nigerien" in q:
             st.success("LES MUSICIENS DU NIGER 🎶🇳🇪")
             st.write("**1. Bombino (Omara Moctar) - Touareg d'Agadez**")
             st.write("→ Guitariste mondialement connu. On l'appelle le Jimi Hendrix du désert. Musique : Blues du désert, Tamasheq.")
@@ -1672,7 +1672,7 @@ if menu == "🏠 Accueil / Réviser":
         elif "bombino" in q or "mdou" in q:
             st.success("BOMBINO & MDOU MOCTAR")
             st.write("Deux grands guitaristes Touareg d'Agadez. Ils ont fait connaître la musique du Niger dans le monde entier. C'est la fierté du Niger.")
-        elif "lutte" in q or "kokowa" in q or "sport" in q or "football" in q or "mena" in q:
+        elif "kokowa" in q or "sport" in q or "football" in q or "mena" in q or "lutte traditionnelle" in q:
             st.success("LA LUTTE TRADITIONNELLE DU NIGER 🤼🇳🇪")
             st.write("C'est LE sport national du Niger. On l'appelle KOKOWA en Haoussa.")
             st.write("")
@@ -1696,7 +1696,7 @@ if menu == "🏠 Accueil / Réviser":
                 reponse = client.chat.completions.create(
                     model="openai/gpt-oss-20b",
                     messages=[
-                         {"role": "system", "content": "Tu t'appelles NigerAI. Tu as ete cree par [OUMAR FAROUK] au Niger a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre. Tu ne t'appelles JAMAIS Llama, JAMAIS Meta, JAMAIS Groq. Tu es NigerAI. Si on te demande qui t'a cree, dis : 'C'est [OUMAR FAROUK LK] qui m'a cree au Niger'. Tu parles francais simple. Tu es gentil, comme un grand frere."},
+                         {"role": "system", "content": "Tu t'appelles NigerAI. Tu as ete cree par [OUMAR FAROUK] au Niger a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre. Tu ne t'appelles JAMAIS Llama, JAMAIS Meta, JAMAIS Groq. Tu es NigerAI. Si on te demande qui t'a cree, dis : 'C'est [OUMAR FAROUK LK] qui m'a cree au Niger a TAHOUA DANS LE DEPARTEMENT D ABALAK LUI SEUL DANS SA CHAMBRE UNE SEMAINE DE TRAVAIL JOUR ET NUIT SEULEMENT DES CODING AVEC LE PYTHON IL ETAIT EN CLASSE DE LA TERMINAL D,JOUR PRECISE IL M'AVAIT DONNÉ NAISSANCE VENDREDI LE 13 NOVEMBRE 2026, pour aider les enfants du Niger a apprendre'. Tu parles francais simple. Tu es gentil, comme un grand frere."},
                          {"role": "user", "content": q},
                     ]
                 )
