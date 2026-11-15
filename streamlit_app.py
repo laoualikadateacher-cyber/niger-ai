@@ -143,29 +143,7 @@ else:
     couleur_micro = "#FF4B4B"  # ROUGE = il attend
     texte_micro = "🎤 Appuie pour parler à Oumar..."
 
-st.markdown(f"**{texte_micro}**")
-<style>
-@keyframes pulse {{
-    0% {{ transform: scale(1); box-shadow: 0 0 0 0 {couleur_micro}; }}
-    70% {{ transform: scale(1.15); box-shadow: 0 0 0 25px rgba(0,0,0,0); }}
-    100% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }}
-}}
-.micro-fou {{
-   width: 120px;
-   height: 120px;
-   background: {couleur_micro};
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 60px;
-   margin: auto;
-   animation: pulse 1.2s infinite;
-}}
-</style>
-<div class="micro-fou">🎤</div>
-<p style="text-align:center; font-size:20px; font-weight:bold;">{texte_micro}</p>
-""", unsafe_allow_html=True)
+
 question_voix = ""
 if audio:
     with st.spinner("J'écoute..."):
@@ -175,7 +153,29 @@ if audio:
          language=code_langue
         )
         question_voix = transcription.text
-        st.success(f"Tu as dit : {question_voix}")
+        st.success(f"Tu as dist.markdown(f"""
+**{texte_micro}**
+<style>
+@keyframes pulse {{
+    0% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }}
+    70% {{ transform: scale(1.15); box-shadow: 0 0 0 25px rgba(0,0,0,0); }}
+    100% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }}
+}}
+.micro-fou {{
+    width: 120px;
+    height: 120px;
+    background: {couleur_micro};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin: auto;
+    animation: pulse 1.2s infinite;
+}}
+</style>
+<div class="micro-fou">🎤</div>
+""", unsafe_allow_html=True)t : {question_voix}")
     question = st.text_input("Ta question :", value=question_voix)
     if st.button("Demander à NigerAI"):  
         q = question.lower().strip()
