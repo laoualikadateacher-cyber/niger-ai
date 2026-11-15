@@ -158,7 +158,7 @@ st.markdown(f"""
 @keyframes pulse {{
     0% {{ transform: scale(1); box-shadow: 0 0 0 0 {couleur_micro}; }}
     70% {{ transform: scale(1.15); box-shadow: 0 0 0 25px rgba(0,0,0,0); }}
-    100% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+    100% {{ transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }}
 }}
 .micro-fou {{
    width: 120px;
