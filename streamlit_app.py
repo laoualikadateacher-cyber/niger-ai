@@ -92,13 +92,11 @@ st.write("## 📰 Publications")
 onglet1, onglet2 = st.tabs(["🇳🇪 Publications du Niger", "👤 Mes Publications"])
 
 with onglet1:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3d/Niamey_Niger.jpg", caption="Niamey aujourd'hui", use_container_width=True)
     st.write("**Niamey aujourd'hui**")
     st.write("Niamey est la capitale du Niger, au bord du fleuve Niger.")
     if st.button("Raconte-moi Niamey", key="pub1"):
         st.success("Niamey est la capitale du Niger, elle est au bord du fleuve Niger. C'est une grande ville, avec le Grand Marché, le Musée National, et beaucoup de monde.")
  
-    st.image("https://upload.wikimedia.org/wikipedia/commons/0/0e/Agadez_Mosque.jpg", caption="La mosquée d'Agadez", use_container_width=True)
     st.write("**La mosquée d'Agadez**")
     st.write("La grande mosquée d'Agadez est en banco, elle est très célèbre.")
     if st.button("Raconte-moi Agadez", key="pub2"):
@@ -142,19 +140,50 @@ elif langue == "Anglais":
 else:
     code_langue = "fr"
 
+st.markdown("### 🎤 Parle à NigerAI")
+
 audio = st.audio_input("Appuie et parle ici", key="micro_oumar_unique")
 
-# --- MICRO QUI CHANGE DE COULEUR ---
-if audio:
-    couleur_micro = "#00CC66"  # VERT = il t'écoute
-    texte_micro = "🎤 Oumar t'écoute..."
-else:
-    couleur_micro = "#FF4B4B"  # ROUGE = il attend
-    texte_micro = "🎤 Appuie pour parler à Oumar..."
-
-st.markdown(f"**{texte_micro}**")
-st.markdown(f"""<div style="width:120px; height:120px; background:{couleur_micro}; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:60px; margin:auto;">🎤</div>""", unsafe_allow_html=True)
 question_voix = ""
+
+if audio:
+    st.success("Oumar a entendu ta voix, je transforme en texte...")
+    try:
+        import speech_recognition as sr
+        from pydub import AudioSegment
+        import io
+
+        son = AudioSegment.from_file(io.BytesIO(audio.read()), format="wav")
+        wav_io = io.BytesIO()
+        son.export(wav_io, format="wav")
+        wav_io.seek(0)
+
+        r = sr.Recognizer()
+        with sr.AudioFile(wav_io) as source:
+            audio_data = r.record(source)
+            question_voix = r.recognize_google(audio_data, language="fr-FR")
+            st.info(f"Tu as dit : {question_voix}")
+    except Exception as e:
+        st.warning("Je n'ai pas bien entendu, écris ta question en bas, mec.")
+
+question = st.text_input("Ta question :", value=question_voix)
+
+if st.button("Demander à NigerAI"):
+    q = question.lower().strip()
+    if q == "":
+        st.warning("Écris ta question d'abord !")
+    else:
+        try:
+            from gtts import gTTS
+            import io
+            tts = gTTS(text=reponse, lang='fr')
+            mp3 = io.BytesIO()
+            tts.write_to_fp(mp3)
+            mp3.seek(0)
+            st.audio(mp3, format="audio/mp3")
+            st.success("🎧 Oumar te parle, appuie sur Play pour l'écouter")
+        except:
+            pass
 question = st.text_input("Ta question :", value=question_voix)
 if st.button("Demander à NigerAI"):  
         q = question.lower().strip()
