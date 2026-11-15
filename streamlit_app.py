@@ -184,8 +184,8 @@ if st.button("Demander à NigerAI"):
             st.success("🎧 Oumar te parle, appuie sur Play pour l'écouter")
         except:
             pass
-     question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
-     if st.button("Demander à NigerAI"):  
+    question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
+    if st.button("Demander à NigerAI"):  
         q = question.lower().strip()
         if q == "":
             st.warning("Écris ta question d'abord !")
