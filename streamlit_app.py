@@ -4,62 +4,52 @@ client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 from gtts import gTTS
 import tempfile
 import os
-# --- DESIGN RDR HOLOGRAMME + GRAND R ---
+# --- VRAI DESIGN RDR : R + ROBOT + CARTE NIGER ---
 st.markdown("""
 <style>
-    .stApp {
-        background: radial-gradient(circle, #1A0033 0%, #000000 80%);
+    .rdr-hero {
+        position: relative;
+        text-align: center;
+        height: 320px;
+        overflow: hidden;
     }
-    .big-R {
-        position: fixed;
-        top: 110px;
+    .rdr-R {
+        position: absolute;
         left: 50%;
-        transform: translateX(-50%);
-        font-size: 380px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 280px;
         font-weight: 900;
         font-family: 'Arial Black';
         color: transparent;
         -webkit-text-stroke: 4px #FF9A00;
         text-shadow: 0 0 40px #FF9A00, 0 0 80px #FF6A00;
-        opacity: 0.35;
+        opacity: 0.30;
         z-index: 0;
-        pointer-events: none;
     }
-    h1 {
+    .rdr-robot {
+        position: relative;
+        z-index: 2;
+        font-size: 130px;
+        margin-top: 40px;
+        filter: drop-shadow(0 0 20px #00F0FF);
+    }
+    .rdr-titre {
+        position: relative;
+        z-index: 2;
         color: #00F0FF !important;
-        text-align: center;
         font-family: 'Arial Black';
-        font-size: 65px !important;
+        font-size: 55px !important;
         text-shadow: 0 0 20px #A100FF, 0 0 40px #00F0FF;
-        position: relative;
-        z-index: 2;
-    }
-    h2, h3, p, label {
-        color: white !important;
-        text-align: center;
-        position: relative;
-        z-index: 2;
-    }
-    .stButton > button {
-        background: transparent;
-        color: #00F0FF;
-        border: 2px solid #00F0FF;
-        border-radius: 25px;
-        padding: 15px;
-        font-weight: bold;
-        font-size: 18px;
-        box-shadow: 0 0 20px #00F0FF;
-        width: 100%;
-        position: relative;
-        z-index: 2;
-    }
-    .stButton > button:hover {
-        background: #FF6A00;
-        color: white;
-        border-color: #FF6A00;
-        box-shadow: 0 0 30px #FF6A00;
+        margin: 0;
     }
 </style>
+<div class="rdr-hero">
+    <div class="rdr-R">R</div>
+    <div class="rdr-robot">🤖</div>
+    <p class="rdr-titre">NigerAI</p>
+    <p style="color:white; position:relative; z-index:2;">🇳🇪 RDR • Votre assistant IA pour le Niger • Seul, on va plus vite. Ensemble, on va plus loin.</p>
+</div>
 """, unsafe_allow_html=True)
 
 st.markdown('<div class="big-R">R</div>', unsafe_allow_html=True)
@@ -102,20 +92,20 @@ st.write("## 📰 Publications")
 onglet1, onglet2 = st.tabs(["🇳🇪 Publications du Niger", "👤 Mes Publications"])
 
 with onglet1:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Niamey_Niger.jpg/640px-Niamey_Niger.jpg", caption="Niamey, la capitale")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/3/3d/Niamey_Niger.jpg", caption="Niamey aujourd'hui", use_container_width=True)
     st.write("**Niamey aujourd'hui**")
     st.write("Niamey est la capitale du Niger, au bord du fleuve Niger.")
     if st.button("Raconte-moi Niamey", key="pub1"):
         st.success("Niamey est la capitale du Niger, elle est au bord du fleuve Niger. C'est une grande ville, avec le Grand Marché, le Musée National, et beaucoup de monde.")
-
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Agadez_Mosque.jpg/640px-Agadez_Mosque.jpg", caption="Agadez")
+ 
+    st.image("https://upload.wikimedia.org/wikipedia/commons/0/0e/Agadez_Mosque.jpg", caption="La mosquée d'Agadez", use_container_width=True)
     st.write("**La mosquée d'Agadez**")
     st.write("La grande mosquée d'Agadez est en banco, elle est très célèbre.")
     if st.button("Raconte-moi Agadez", key="pub2"):
         st.success("La mosquée d'Agadez est faite en banco, en terre. Elle est très haute, très célèbre dans tout le monde. C'est le symbole d'Agadez.")
 
 with onglet2:
-    st.write("**C'est ici que tu mets TES publications, Oumar**")
+    st.write("**lose? I don't lose I win! that's my job that's what I do, Oumar**")
     st.write("Salut, c'est Oumar, bienvenue sur ma page !")
     st.write("---")
     st.write("**Seul, on va plus vite. Ensemble, on va plus loin :**")
@@ -143,17 +133,17 @@ elif langue == "Anglais":
 else:
     code_langue = "fr"
 
-audio = st.audio_input("Appuie et parle ici")
+audio = st.audio_input("Appuie et parle ici", key="micro_oumar_unique")
 
-# --- MICRO FOU QUI CHANGE DE COULEUR ---
+# --- MICRO QUI CHANGE DE COULEUR ---
 if audio:
-    couleur_micro = "#00CC66"  # VERT = toi tu parles
-    texte_micro = "Oumar t'écoute... 👂"
+    couleur_micro = "#00CC66"  # VERT = il t'écoute
+    texte_micro = "🎤 Oumar t'écoute..."
 else:
-    couleur_micro = "#FF4B4B"  # ROUGE = il t'attend
-    texte_micro = "Oumar t'écoute..."
+    couleur_micro = "#FF4B4B"  # ROUGE = il attend
+    texte_micro = "🎤 Appuie pour parler à Oumar..."
 
-st.markdown(f"""
+st.markdown(f"**{texte_micro}**")
 <style>
 @keyframes pulse {{
     0% {{ transform: scale(1); box-shadow: 0 0 0 0 {couleur_micro}; }}
