@@ -149,7 +149,7 @@ st.markdown(f"""<div style="width:120px; height:120px; background:{couleur_micro
 question = st.text_input("Ta question :", value=question_voix)
 if st.button("Demander à NigerAI"):  
     q = question.lower().strip()
-     if q == "":
+    if q == "":
             st.warning("Écris ta question d'abord !")
       
         elif "haoussa du niger" in q or "hausa" in q:
