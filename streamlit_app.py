@@ -132,11 +132,11 @@ if audio is not None:
             st.write("Toi : " + question_voix)
     except:
         question_voix = ""
-    question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
     question = st.text_input("Ta question :", value=question_voix)
     cliquer = st.button("Demander à NigerAI", key="demander_nigerai_unique")
-    if question_voix != "" or cliquer:
-        if q == "":
+     if question_voix != "" or cliquer:
+       q = question.lower().strip()
+         if q == "":
             st.warning("Écris ta question d'abord !")
       
         elif "haoussa du niger" in q or "hausa" in q:
