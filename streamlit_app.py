@@ -108,8 +108,6 @@ if menu == "🏠 Accueil / Réviser":
     st.header("Pose ta question sur le Niger")
     st.write("### 🎤 Parle à NigerAI")
 
-audio = st.audio_input("Appuie et parle ici")
-
 langue = st.selectbox("Choisis la langue :", ["Français", "Haoussa", "Anglais", "Tamasheq"])
 
 if langue == "Français":
@@ -121,54 +119,21 @@ elif langue == "Anglais":
 else:
     code_langue = "fr"
 
-st.markdown("### 🎤 Parle à NigerAI")
-
-audio = st.audio_input("Appuie et parle ici", key="micro_oumar_unique")
-
+ # --- VOIX SANS BOUTON ---
 question_voix = ""
-
-if audio:
-    st.success("Oumar a entendu ta voix, je transforme en texte...")
+audio = st.audio_input("Appuie et parle, je t'ecoute", key="micro_unique")
+if audio is not None:
     try:
         import speech_recognition as sr
-        from pydub import AudioSegment
-        import io
-
-        son = AudioSegment.from_file(io.BytesIO(audio.read()), format="wav")
-        wav_io = io.BytesIO()
-        son.export(wav_io, format="wav")
-        wav_io.seek(0)
-
         r = sr.Recognizer()
-        with sr.AudioFile(wav_io) as source:
-            audio_data = r.record(source)
-            question_voix = r.recognize_google(audio_data, language="fr-FR")
-            st.info(f"Tu as dit : {question_voix}")
-    except Exception as e:
-        st.warning("Je n'ai pas bien entendu, écris ta question en bas, mec.")
-
-question = st.text_input("Ta question :", value=question_voix)
-
-if st.button("Demander à NigerAI"):
-    q = question.lower().strip()
-    if q == "":
-        st.warning("Écris ta question d'abord !")
-    else:
-        textes_a_lire = []
-        _vrai_write = st.write
-        _vrai_success = st.success
-        def write_qui_parle(*a, **k):
-            for x in a:
-                textes_a_lire.append(str(x))
-            return _vrai_write(*a, **k)
-        def success_qui_parle(*a, **k):
-            for x in a:
-                textes_a_lire.append(str(x))
-            return _vrai_success(*a, **k)
-        st.write = write_qui_parle
-        st.success = success_qui_parle
+        with sr.AudioFile(audio) as source:
+            voix = r.listen(source)
+            question_voix = r.recognize_google(voix, language="fr-FR")
+            st.write("Toi : " + question_voix)
+    except:
+        question_voix = ""
     question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
-    if st.button("Demander à NigerAI", key="demander_nigerai_unique"):
+    if question_voix != "" or st.button("Demander à NigerAI", key="demander_nigerai_unique"):
         q = question.lower().strip()
         if q == "":
             st.warning("Écris ta question d'abord !")
