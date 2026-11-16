@@ -118,7 +118,7 @@ elif langue == "Anglais":
     code_langue = "en"
 else:
     code_langue = "fr"
-
+textes_a_lire = []
  # --- VOIX SANS BOUTON ---
 question_voix = ""
 audio = st.audio_input("Appuie et parle, je t'ecoute", key="micro_unique")
