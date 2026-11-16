@@ -133,8 +133,9 @@ if audio is not None:
     except:
         question_voix = ""
     question = st.text_input("Ta question :", value=question_voix, key="question_discussion_unique")
-    if question_voix != "" or st.button("Demander à NigerAI", key="demander_nigerai_unique"):
-        q = question.lower().strip()
+    question = st.text_input("Ta question :", value=question_voix)
+    cliquer = st.button("Demander à NigerAI", key="demander_nigerai_unique")
+    if question_voix != "" or cliquer:
         if q == "":
             st.warning("Écris ta question d'abord !")
       
