@@ -111,13 +111,13 @@ if menu == "🏠 Accueil / Réviser":
 langue = st.selectbox("Choisis la langue :", ["Français", "Haoussa", "Anglais", "Tamasheq"])
 
 if langue == "Français":
-    code_langue = "fr"
+    code_langue = "fr-FR"
 elif langue == "Haoussa":
-    code_langue = "ha"
+    code_langue = "ha-NG"
 elif langue == "Anglais":
-    code_langue = "en"
+    code_langue = "en-US"
 else:
-    code_langue = "fr"
+    code_langue = "fr-FR"
 textes_a_lire = []
  # --- VOIX SANS BOUTON ---
 question_voix = ""
@@ -128,7 +128,7 @@ if audio is not None:
         r = sr.Recognizer()
         with sr.AudioFile(audio) as source:
             voix = r.listen(source)
-            question_voix = r.recognize_google(voix, language="fr-FR")
+            question_voix = r.recognize_google(voix, language=code_langue)
             st.write("Toi : " + question_voix)
     except:
         question_voix = ""
